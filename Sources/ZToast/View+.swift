@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+@available(iOS 17.0, *)
 extension View {
     
     public func showToast(message: Binding<String>, isShowing: Binding<Bool>, axis: ToastAxis = .top) -> some View {

@@ -11,6 +11,7 @@ public enum ToastAxis {
     case top, bottom
 }
 
+@available(iOS 17.0, *)
 fileprivate struct Toast: View {
     @Binding private var message: String
     @State private var presentToast: Bool = false
@@ -87,6 +88,7 @@ fileprivate struct Toast: View {
     }
 }
 
+@available(iOS 17.0, *)
 public struct ToastModifier: ViewModifier {
     @Binding var message: String
     @Binding var isShowing: Bool
