@@ -1,6 +1,0 @@
-framework module ZToast {
-  umbrella header "ZToast.h"
-  export *
-
-  module * { export * }
-}
