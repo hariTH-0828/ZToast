@@ -13,11 +13,11 @@ public enum ToastAxis {
 
 @available(iOS 17.0, *)
 fileprivate struct Toast: View {
-    @Binding private var message: String
+    @Binding private var message: String?
     @State private var presentToast: Bool = false
     private var axis: ToastAxis
     
-    init(message: Binding<String>, axis: ToastAxis) {
+    init(message: Binding<String?>, axis: ToastAxis) {
         self._message = message
         self.axis = axis
     }
@@ -33,7 +33,7 @@ fileprivate struct Toast: View {
                             .frame(width: 26, height: 26)
                             .clipShape(Circle())
                         
-                        Text(message)
+                        Text(message ?? "")
                             .lineLimit(1)
                             .font(.footnote)
                             .frame(height: 40)
@@ -84,18 +84,18 @@ fileprivate struct Toast: View {
     
     private var messageWidth: CGFloat {
         let attributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: UIFont.systemFontSize)]
-        return (message as NSString).size(withAttributes: attributes).width
+        return (message as? NSString)?.size(withAttributes: attributes).width ?? 50
     }
 }
 
 @available(iOS 17.0, *)
 public struct ToastModifier: ViewModifier {
-    @Binding var message: String
+    @Binding var message: String?
     @Binding var isShowing: Bool
     private let toast: Toast
     private let axis: ToastAxis
     
-    init(message: Binding<String>, isShowing: Binding<Bool>, _ axis: ToastAxis) {
+    init(message: Binding<String?>, isShowing: Binding<Bool>, _ axis: ToastAxis) {
         self._message = message
         self._isShowing = isShowing
         self.axis = axis
