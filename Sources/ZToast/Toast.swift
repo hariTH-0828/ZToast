@@ -13,12 +13,12 @@ public enum ToastAxis {
 
 @available(iOS 17.0, *)
 fileprivate struct Toast: View {
-    @Binding private var message: String?
+    @State private var message: String?
     @State private var presentToast: Bool = false
     private var axis: ToastAxis
     
-    init(message: Binding<String?>, axis: ToastAxis) {
-        self._message = message
+    init(message: String?, axis: ToastAxis) {
+        self.message = message
         self.axis = axis
     }
     
@@ -90,13 +90,13 @@ fileprivate struct Toast: View {
 
 @available(iOS 17.0, *)
 public struct ToastModifier: ViewModifier {
-    @Binding var message: String?
+    @State var message: String?
     @Binding var isShowing: Bool
     private let toast: Toast
     private let axis: ToastAxis
     
-    init(message: Binding<String?>, isShowing: Binding<Bool>, _ axis: ToastAxis) {
-        self._message = message
+    init(message: String?, isShowing: Binding<Bool>, _ axis: ToastAxis) {
+        self.message = message
         self._isShowing = isShowing
         self.axis = axis
         self.toast = Toast(message: message, axis: axis)
