@@ -39,13 +39,15 @@ fileprivate struct Toast: View {
                             .frame(height: 40)
                     }
                     .padding(.horizontal, 8)
-                    .background(Color(uiColor: .secondarySystemBackground))
-                    .clipShape(Capsule())
+                    .background(
+                        Capsule()
+                            .fill(Color(uiColor: .secondarySystemBackground))
+                    )
                     .frame(minWidth: 0,
-                           maxWidth: min(geometry.size.width * 0.7, messageWidth + 50),
-                           idealHeight: 40)
+                           maxWidth: min(geometry.size.width * 0.7, messageWidth + 50))
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: axis == .top ? .top : .bottom)
+                .padding(.bottom, 40)
                 .animation(.spring, value: presentToast)
                 .transition(.move(edge: axis == .top ? .top : .bottom).combined(with: .opacity))
             }
