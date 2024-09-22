@@ -47,7 +47,7 @@ fileprivate struct Toast: View {
                            maxWidth: min(geometry.size.width * 0.7, messageWidth + 50))
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: axis == .top ? .top : .bottom)
-                .padding(.bottom, 30)
+                .padding(.bottom, 20)
                 .animation(.spring, value: presentToast)
                 .transition(.move(edge: axis == .top ? .top : .bottom).combined(with: .opacity))
             }
