@@ -6,7 +6,7 @@ import PackageDescription
 let package = Package(
     name: "ZToast",
     defaultLocalization: "en",
-    platforms: [.iOS(.v17)],
+    platforms: [.iOS(.v16)],
     products: [
         .library(
             name: "ZToast",
