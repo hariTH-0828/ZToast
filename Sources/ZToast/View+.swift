@@ -61,7 +61,7 @@ extension ToastViewStyle where Self == DefaultToastStyle {
     /// ```swift
     /// .toastViewStyle(.defaultToastStyle)
     /// ```
-    static var defaultToastStyle: DefaultToastStyle {
+    public static var defaultToastStyle: DefaultToastStyle {
         return DefaultToastStyle()
     }
     
@@ -76,7 +76,7 @@ extension ToastViewStyle where Self == DefaultToastStyle {
     /// ```swift
     /// .toastViewStyle(.snackBarToastStyle)
     /// ```
-    static var snackBarToastStyle: SnackBarToastStyle {
+    public static var snackBarToastStyle: SnackBarToastStyle {
         return SnackBarToastStyle()
     }
 }
