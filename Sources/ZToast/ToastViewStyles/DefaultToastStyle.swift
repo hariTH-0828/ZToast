@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+@available(iOS 16.0, *)
 public struct DefaultToastStyle: ToastViewStyle {
     public func makeBody(message: String?) -> some View {
         GeometryReader(content: { geometry in
