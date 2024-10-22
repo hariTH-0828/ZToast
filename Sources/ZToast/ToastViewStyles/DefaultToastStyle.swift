@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct DefaultToastStyle: ToastViewStyle {
+public struct DefaultToastStyle: ToastViewStyle {
     public func makeBody(message: String?) -> some View {
         GeometryReader(content: { geometry in
             ZStack {
