@@ -48,6 +48,7 @@ extension View {
     }
 }
 
+@available(iOS 16.0, *)
 extension ToastViewStyle where Self == DefaultToastStyle {
     
     /// A static property that returns the default toast style.

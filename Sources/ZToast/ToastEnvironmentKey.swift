@@ -13,6 +13,7 @@ import SwiftUI
 /// The default value is set to `AnyToastViewStyle` wrapping a `DefaultToastStyle`.
 ///
 /// - Note: This key is meant to be used internally within the `EnvironmentValues` extension.
+@available(iOS 16.0, *)
 private struct ToastStyleKey: EnvironmentKey {
     /// The default value for the environment key, which is an `AnyToastViewStyle`
     /// wrapping the `DefaultToastStyle`. This will be used if no other toast style
