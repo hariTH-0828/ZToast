@@ -10,7 +10,7 @@ let package = Package(
     products: [
         .library(
             name: "ZToast",
-            targets: ["ZToast"]),
+            targets: ["ZToast", "ToastViewStyles"]),
     ],
     targets: [
         .target(

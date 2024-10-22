@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-public struct SnackBarToastStyle: ToastViewStyle {
+struct SnackBarToastStyle: ToastViewStyle {
     public func makeBody(message: String?) -> some View {
         ZStack {
             HStack {
