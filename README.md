@@ -88,9 +88,6 @@ struct ContentView: View {
         VStack {
             Button("Show Custom Toast") {
                 isToastVisible = true
-                DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                    isToastVisible = false
-                }
             }
         }
         .showToast(message: "Custom styled toast!", isShowing: $isToastVisible)
