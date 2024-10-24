@@ -37,6 +37,9 @@ struct ContentView: View {
     }
 }
 ```
+https://github.com/user-attachments/assets/52c1fa5c-f64e-478b-8bfd-7622dfd1628e
+
+https://github.com/user-attachments/assets/33dfb88e-ef4d-4058-8a25-fb463833445d
 
 ### 2. Applying a Custom Toast Style
 You can customize how your toast looks by using different styles. Here's how to set the `DefaultToastStyle`:
