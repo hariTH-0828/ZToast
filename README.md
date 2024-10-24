@@ -15,6 +15,8 @@
 ## Installation 
 To integrate **ZToast** into your project, add the following to your `Podfile`: 
 ```ruby
+source 'https://zrepository.zoho.com/zohocorp/user/Harisaravanan/Podspecs.git'
+
 pod 'ZToast'
 ```
 
